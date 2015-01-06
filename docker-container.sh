@@ -34,8 +34,7 @@ else
 	fi
 
 	RESTART=./restart.sh
-	touch $RESTART
-	echo "docker rm -f $__FQDN__" >> $RESTART
+	echo "docker rm -f $__FQDN__" > $RESTART
 	echo "$0 $__FQDN__" >> $RESTART
 	chmod +x $RESTART
 
